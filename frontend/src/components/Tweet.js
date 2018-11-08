@@ -1,29 +1,30 @@
-import React, { Component } from 'react';
-import api from '../services/api';
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    borderBottomWidth: 1,
+    borderColor: "#eee"
+  },
 
-import like from "../like.svg"
-import './Tweet.css'
+  author: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#1C2022"
+  },
 
-export default class Tweet extends Component {
-  handleLike = async () => {
-      const { _id } = this.props.tweet
+  content: {
+    fontSize: 15,
+    lineHeight: 20,
+    color: "#1C2022",
+    marginVertical: 10
+  },
 
-      await api.post(`likes/${_id}`);
+  likeButton: {
+    flexDirection: "row",
+    alignItems: "center"
+  },
+
+  likeText: {
+    color: "#999",
+    marginLeft: 5
   }
-  
-  render() {
-    const { tweet } = this.props;
-
-
-    return (
-        <li className="tweet">
-            <strong>{tweet.author}</strong>
-            <p>{tweet.content}</p>
-            <button type="button" onClick={this.handleLike}>
-                <img src={like} alt="Like"/>
-                {tweet.likes}
-            </button>
-        </li>
-    );
-  }
-}
+});
