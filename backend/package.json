@@ -1,12 +1,12 @@
 {
-  "name": "goweek",
+  "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "mongoose": "^5.3.9",
+    "mongoose": "^5.3.10",
     "socket.io": "^2.1.1"
   },
   "devDependencies": {

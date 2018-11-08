@@ -1,4 +1,4 @@
-const Tweet = require('../models/Tweet');
+const Tweet = require('../models/Tweet')
 
 module.exports = {
     async index(req, res) {
@@ -14,4 +14,5 @@ module.exports = {
 
         return res.json(tweet);
     }
-};
+}
+
